@@ -1,4 +1,7 @@
-public class exam {
+package ex01_exam;
+
+public class Exam {
+	
 
 	// 문제1. String serial의 첫 번째 글자가 "1"이면 "남자", "2"이면 "여자"를 출력하시오.
 	// 예시
@@ -161,4 +164,7 @@ public class exam {
 		q10();
 	}
 
-}
+
+}	
+
+

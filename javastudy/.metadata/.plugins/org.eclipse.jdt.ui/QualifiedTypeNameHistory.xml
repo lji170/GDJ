@@ -15,6 +15,7 @@
     <fullyQualifiedTypeName name="ex03_method.Calculator"/>
     <fullyQualifiedTypeName name="ex06_method_overload.Calculator"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="ex09_this.Student"/>
+    <fullyQualifiedTypeName name="ex03_has_a.Soldier"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

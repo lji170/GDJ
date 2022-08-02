@@ -18,4 +18,8 @@
     <fullyQualifiedTypeName name="ex09_this.Student"/>
     <fullyQualifiedTypeName name="ex03_has_a.Soldier"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ex06_constructor.StudentMain"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="ex07_override.Americano"/>
+    <fullyQualifiedTypeName name="ex10_downcasting.Alba"/>
 </qualifiedTypeNameHistroy>

@@ -17,9 +17,15 @@
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="ex09_this.Student"/>
     <fullyQualifiedTypeName name="ex03_has_a.Soldier"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="ex06_constructor.StudentMain"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="ex07_override.Americano"/>
     <fullyQualifiedTypeName name="ex10_downcasting.Alba"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="library.Book"/>
+    <fullyQualifiedTypeName name="lombok.ToString"/>
 </qualifiedTypeNameHistroy>

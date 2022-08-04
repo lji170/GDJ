@@ -1,6 +1,6 @@
 package ex08_override;
 
-public class Circle  extends Shape {
+public class Circle extends Shape {
 	
 	private double radius;
 

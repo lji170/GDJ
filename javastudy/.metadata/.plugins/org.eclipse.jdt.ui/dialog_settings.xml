@@ -8,6 +8,8 @@
 	<item key="TypeHierarchyViewPart.orientation" value="3"/>
 	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\GDJ\installer\jar"/>
 	<section name="completion_proposal_size">
+		<item key="size.x" value="428"/>
+		<item key="size.y" value="1046"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>

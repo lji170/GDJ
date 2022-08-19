@@ -20,7 +20,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class Main {
+public class Main1_WML {
 
 	
 	// 요청
@@ -70,7 +70,7 @@ public class Main {
 			url = new URL(apiURL);
 			con = (HttpURLConnection) url.openConnection();
 			con.setRequestMethod("GET");
-			con.setRequestProperty("Content-Type", "application/xml; charset=UTF-8");
+			con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
 		} catch(MalformedURLException e) {
 			System.out.println("API 주소 오류");
 		} catch(IOException e) {
@@ -103,7 +103,7 @@ public class Main {
 			System.out.println("API 응답 실패");
 		}
 		
-		// API로부터 전달받은 xml 데이터
+		// API로부터 전달받은 json 데이터
 		String response = sb.toString();
 		
 		// XML File 생성

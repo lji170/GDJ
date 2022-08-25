@@ -37,7 +37,7 @@ public class Ex03 {
 		balance *= 1.05; // balance를 double로 promotion해서 처리한다.
 		System.out.println(balance);
 		
-		// balance = balance * 1.05; 실패. blalance * 1.05결과는 double이기 때문에 long balance에 저장할 수 없다.
+		// balance = balance * 1.05; 실패. balance * 1.05결과는 double이기 때문에 long balance에 저장할 수 없다.
 		// balance = (long)(balance * 1.05); 성공. balance * 1.05 결과를 long으로 casting해서 저장할 수 있다.
 		
 		// balance = balance + balance * 0.05; 실패. balance + balance * 0.5 결과는 double이기 때문에 long balance에 저장 할 수 없다.

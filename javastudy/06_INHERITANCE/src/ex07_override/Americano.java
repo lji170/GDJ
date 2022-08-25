@@ -6,7 +6,7 @@ public class Americano extends Expresso {
 
 	@Override
 	public void taste() {
-		// TODO 해야 할 일을 적어 둠
+		// 해야 할 일을 적어 둠
 		System.out.println("덜 쓰다");
 	}
 

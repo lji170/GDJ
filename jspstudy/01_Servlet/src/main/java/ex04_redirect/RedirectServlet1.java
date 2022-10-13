@@ -1,4 +1,4 @@
-package ex04;
+package ex04_redirect;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,17 +9,20 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/RedirectServlet1")
+
+
 public class RedirectServlet1 extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
 		// redirect
 		response.sendRedirect("/01_Servlet/RedirectServlet2");
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 		doGet(request, response);
 	}
 

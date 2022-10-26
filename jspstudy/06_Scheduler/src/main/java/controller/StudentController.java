@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import common.ActionForward;
 import service.StudentAddService;
+import service.StudentDetailService;
 import service.StudentFindService;
 import service.StudentListService;
 import service.StudentRemoveService;
 import service.StudentService;
+import service.StudentModifyService;
 
 @WebServlet("*.do")
 
@@ -49,12 +51,19 @@ public class StudentController extends HttpServlet {
 		case "/student/find.do":
 			service = new StudentFindService();
 			break;
-		case "/studnet/remove.do":
+		case "/student/remove.do":
 			service = new StudentRemoveService();
+			break;
+		case "/student/detail.do":
+			service = new StudentDetailService();			
+			break;
+		case "/student/modify.do":
+			service = new StudentModifyService();
 			break;
 		case "/student/write.do":
 			af = new ActionForward("/student/write.jsp", false);
 			break;
+			
 		}	
 			
 		// 선택된 Service 실행

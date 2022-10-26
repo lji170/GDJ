@@ -15,7 +15,7 @@ public class StudentRemoveService implements StudentService {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		// 요청 파라미터
-		Optional<String> opt = Optional.ofNullable(request.getParameter("stuNO"));
+		Optional<String> opt = Optional.ofNullable(request.getParameter("stuNo"));
 		int stuNo = Integer.parseInt(opt.orElse("0"));
 		
 		// DB에 stuNo 전달(삭제)

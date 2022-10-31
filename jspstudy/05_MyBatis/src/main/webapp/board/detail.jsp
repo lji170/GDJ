@@ -41,9 +41,9 @@
 	<hr>
 	
 	<div>
-		<input type="button" value="편집" id="btn_edit">
-		<input type="button" value="삭제" id="btn_remove">
+		<input type="button" value="수정" id="btn_edit">
 		<input type="button" value="목록" id="btn_list">
+		<input type="button" value="삭제" id="btn_remove">
 	</div>	
 	
 </body>

@@ -25,4 +25,4 @@
 9. ViewResolver가 실제로 응답할 뷰의 전체 정보(경로를 포함한 JSP의 이름)를
 	DispathcherServlet에게 알려 준다.
 	
-10. DispathcherServlet이 응답할 뷰로 이동한다.			
+10. DispathcherServlet이 응답할 뷰로 이동한다.	

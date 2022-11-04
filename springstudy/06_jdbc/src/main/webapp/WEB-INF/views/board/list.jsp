@@ -12,7 +12,7 @@
 	
 	$(document).ready(function(){
 		
-	
+		
 		
 	});
 	
@@ -20,28 +20,32 @@
 </head>
 <body>
 
-		<div>
-			<table border="1">
-				<thead>
+	<div>
+		<a href="${contextPath}/brd/write">새글작성</a>
+	</div>
+
+	<div>
+		<table border="1">
+			<thead>
+				<tr>
+					<td>글번호</td>
+					<td>제목</td>
+					<td>작성자</td>
+					<td>작성일</td>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${boards}" var="board">
 					<tr>
-						<td>글번호</td>
-						<td>제목</td>
-						<td>작성자</td>						
-						<td>작성일</td>						
+						<td>${board.board_no}</td>
+						<td><a href="${contextPath}/brd/detail?board_no=${board.board_no}">${board.title}</a></td>
+						<td>${board.writer}</td>
+						<td>${board.create_date}</td>
 					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${boards}" var="board">
-						<tr>
-							<td>${board.board_no}</td>
-							<td>${board.title}</td>
-							<td>${board.writer}</td>
-							<td>${board.create_date}</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
 
 </body>
 </html>

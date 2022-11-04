@@ -15,7 +15,35 @@
 	
 	$(document).ready(function(){
 		
-		$('#content').summernote();
+		// summernote
+		$('#content').summernote({
+			width: 800,
+			height: 400,
+			lang: 'ko-KR',
+			toolbar: [
+			    // [groupName, [list of button]]
+			    ['style', ['bold', 'italic', 'underline', 'clear']],
+			    ['font', ['strikethrough', 'superscript', 'subscript']],
+			    ['fontsize', ['fontsize']],
+			    ['color', ['color']],
+			    ['para', ['ul', 'ol', 'paragraph']],
+			    ['height', ['height']]
+			]
+		});
+		
+		// 목록
+		$('#btn_list').click(function(){
+			location.href = '${contextPath}/brd/list';
+		});
+		
+		// 서브밋
+		$('#frm_board').submit(function(event){
+			if($('#title').val() == '' || $('#writer').val() == ''){
+				alert('제목과 작성자는 필수입니다.');
+				event.preventDefault();  // 서브밋 취소
+				return;  // 더 이상 코드 실행할 필요 없음
+			}
+		});
 		
 	});
 	
@@ -23,7 +51,28 @@
 </head>
 <body>
 
-	<textarea id="content"></textarea>
+	<div>
+		<h1>작성 화면</h1>
+		<form id="frm_board" action="${contextPath}/brd/add" method="post">
+			<div>
+				<label for="title">제목</label>
+				<input type="text" name="title" id="title">
+			</div>
+			<div>
+				<label for="writer">작성자</label>
+				<input type="text" name="writer" id="writer">
+			</div>
+			<div>
+				<label for="content">내용</label>
+				<textarea name="content" id="content"></textarea>				
+			</div>
+			<div>
+				<button>작성완료</button>
+				<input type="reset" value="입력초기화">
+				<input type="button" value="목록" id="btn_list">
+			</div>
+		</form>
+	</div>
 
 </body>
 </html>

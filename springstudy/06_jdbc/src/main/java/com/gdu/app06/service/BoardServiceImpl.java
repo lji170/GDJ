@@ -8,22 +8,25 @@ import org.springframework.stereotype.Service;
 import com.gdu.app06.domain.BoardDTO;
 import com.gdu.app06.repository.BoardDAO;
 
+
 /*
 	@Service
-	안녕. 난 DAO에 추가하는 @Service야.
+	안녕. 난 Service에 추가하는 @Component야.
 	servlet-context.xml에 등록된 <context:component-scan> 태그에 의해서 bean으로 검색되지.
-	root-context.xml이나 @Configuration에 @Bean으로 등록하지 않아도 컨테이너에 만들어 져.  
+	root-context.xml이나 @Configuration에 @Bean으로 등록하지 않아도 컨테이너에 만들어 져.
 */
 
-@Service   // Service가 사용하는 @Component
+
+@Service  // Service가 사용하는 @Component
 
 
 public class BoardServiceImpl implements BoardService {
 
 	
 	// Service는 DAO를 사용합니다.
-	@Autowired // 컨테이너에 생성된 bean 중에서 BoadrDAO 타입의 bean을 가져오시오.
+	@Autowired  // 컨테이너에 생성된 bean 중에서 BoardDAO 타입의 bean을 가져오시오.
 	private BoardDAO dao;
+	
 	
 	@Override
 	public List<BoardDTO> findAllBoards() {
@@ -32,26 +35,22 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public BoardDTO findBoardByNo(int board_no) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.selectBoardByNo(board_no);
 	}
 
 	@Override
 	public int saveBoard(BoardDTO board) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.insertBoard(board);
 	}
 
 	@Override
 	public int modifyBoard(BoardDTO board) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.updateBoard(board);
 	}
 
 	@Override
 	public int removeBoard(int board_no) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.deleteBoard(board_no);
 	}
 
 }

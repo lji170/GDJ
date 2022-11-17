@@ -38,18 +38,23 @@ public class BoardServiceImpl implements BoardService {
 	public int removeBoard(int board_no) {
 		return dao.deleteBoard(board_no);
 	}
-
+	
+	@Override
 	public void testTransaction() {
 		
+		// 트랜잭션은 언제 필요한가요?
+		// 하나의 서비스에서 2개 이상의 INSERT/UPDATE/DELETE가 호출되는 경우에 필요합니다.
 		
 		// 성공
-		dao.insertBoard(new BoardDTO(0, "트랜잭션제목", "트랜잭션내용", "트랜잭션작성자", null, null));
+		dao.insertBoard(new BoardDTO(0, "트랙잭션제목", "트랜잭션내용", "트랜잭션작성자", null, null));
 		
 		// 실패
 		dao.insertBoard(new BoardDTO());  // Exception이 발생하는 실패 상황 연출
 		
-		// 트랜잭션이 정상적으로 동작한다면, 
+		
+		// 트랜잭션이 정상적으로 동작한다면,
 		// 둘 다 실패해야 한다.
 		
 	}
+	
 }

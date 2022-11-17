@@ -10,7 +10,10 @@
 </head>
 <body>
 
+	<div>
 	<a href="${contextPath}/board/list.do">게시판</a>
-
+	</div>
+	
+	
 </body>
 </html>

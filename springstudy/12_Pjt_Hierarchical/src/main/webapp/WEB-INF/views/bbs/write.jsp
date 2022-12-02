@@ -14,7 +14,7 @@
 		<h1>작성</h1>
 		<form method="post" action="${contextPath}/bbs/add">
 			<div>
-				<input type="text" name="writer" placeholder="작성자" required>
+				<input type="text" name="write" placeholder="작성자" required>
 			</div>
 			<div>
 				<input type="text" name="title" placeholder="제목" required>

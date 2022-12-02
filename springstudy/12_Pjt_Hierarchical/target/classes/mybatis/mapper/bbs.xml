@@ -29,17 +29,17 @@
 			(BBS_SEQ.NEXTVAL, #{writer}, #{title}, #{ip}, SYSDATE, 1, 0, BBS_SEQ.CURRVAL, 0)
 	</insert>
 	
-	<!-- 
+	<!--
 		updatePreviousReply 쿼리
 		1. 기존 답글들의 GROUP_ORDER를 1 증가시키는 쿼리문이다.
 		2. parameterType="BbsDTO"는 원글을 의미한다.
-	 -->
+	-->
 	<update id="updatePreviousReply" parameterType="BbsDTO">
-		UPDATE BBS						<!-- ↑ 답글 -->
+		UPDATE BBS
 		   SET GROUP_ORDER = GROUP_ORDER + 1
 		 WHERE GROUP_NO = #{groupNo}
-		   AND GROUP_ORDER > #{groupOrder}   	
-	</update>  
+		   AND GROUP_ORDER > #{groupOrder}
+	</update>
 	
 	<insert id="insertReply" parameterType="BbsDTO">
 		INSERT INTO BBS

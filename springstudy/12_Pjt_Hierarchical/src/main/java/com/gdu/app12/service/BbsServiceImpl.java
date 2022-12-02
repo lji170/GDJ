@@ -29,7 +29,6 @@ public class BbsServiceImpl implements BbsService {
 	@Override
 	public void findAllBbsList(HttpServletRequest request, Model model) {
 		
-		
 		// 파라미터 page, 전달되지 않으면 page=1로 처리
 		Optional<String> opt1 = Optional.ofNullable(request.getParameter("page"));
 		int page = Integer.parseInt(opt1.orElse("1"));

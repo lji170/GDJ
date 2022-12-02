@@ -1,8 +1,9 @@
 -- 계층형(Hierarchical) 게시판
 
 -- 상세보기 없음
--- 댓글/대댓글 가능
+-- 1단답글/2단댓글 이상 가능
 -- 삭제기능이 UPDATE로 처리
+
 
 DROP SEQUENCE BBS_SEQ;
 CREATE SEQUENCE BBS_SEQ NOCACHE;
@@ -10,13 +11,13 @@ CREATE SEQUENCE BBS_SEQ NOCACHE;
 DROP TABLE BBS;
 CREATE TABLE BBS (
     BBS_NO NUMBER NOT NULL,
-    WRITER VARCHAR2(20 BYTE) NOT NULL,
-    TITLE  VARCHAR2(1000 BYTE) NOT NULL,   -- 제목이 곧 내용
+    WRITER VARCHAR2(64 BYTE) NOT NULL,    -- SHA-256 테스트용 크기 64 byte
+    TITLE  VARCHAR2(1000 BYTE) NOT NULL,  -- 제목이 곧 내용
     IP     VARCHAR2(30 BYTE) NOT NULL,
     CREATE_DATE DATE NOT NULL,
-    STATE  NUMBER(1) NOT NULL, /* 정상:1, 삭제:0 */
-    DEPTH  NUMBER(2) NOT NULL, /* 원글:0, 1차댓글:1, 2차댓글:2, ... */
-    GROUP_NO NUMBER NOT NULL,  /* 원글과 모든 댓글은 같은 GROUP_NO 원글:BBS_NO, 댓글:원글의 BBS_NO */ 
+    STATE  NUMBER(1) NOT NULL,  /* 정상:1, 삭제:0 */
+    DEPTH  NUMBER(2) NOT NULL,  /* 원글:0, 1차댓글:1, 2차댓글:2, ... */
+    GROUP_NO NUMBER NOT NULL,  /* 원글과 모든 댓글은 같은 GROUP_NO, 원글:BBS_NO, 댓글:원글의 BBS_NO */
     GROUP_ORDER NUMBER NOT NULL,  /* 동일 그룹 내 표시 순서 */
     CONSTRAINT PK_BBS PRIMARY KEY(BBS_NO)
 );
